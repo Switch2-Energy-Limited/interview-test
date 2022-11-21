@@ -1,34 +1,42 @@
 # Switch2 Tech Interview Test
 
-Create suitable code to deploy in AWS Lambda which consumes a V1.0 [API Gateway Lambda Proxy event](https://docs.amazonaws.cn/en_us/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html).
+Create an API to extract data from the [UK Police Crime Data](https://data.police.uk/docs/) to show a stop & search outcome summary for a force on a given date.
 
-The API endpoint has a path parameter called `force` and an optional query string parameter called `date`.
+Stop and search data by date can be accessed from the data API endpoint: ["Police stop and searches with no location"](https://data.police.uk/docs/method/stops-no-location/). Example parameters for testing: force: 'metropolitan', date: '2022-08'.
 
-Use these parameters to make an API call to the ["Police stop and searches with no location" API](https://data.police.uk/docs/method/stops-no-location/). Example parameters for testing: force: 'metropolitan', date: '2022-08'.
+## Requirements:
+ - Provide a GET endpoint which takes force and date parameters `~/stop-and-search/outcome?date=<YYYY-MM>&force=<force_name>`.
+ - Validate all API requests.
+ - For each request return a JSON body with the following data:
 
-Extract the data from the API call and produce a count for each instance of the `outcome` property.
+    From the data API call and produce a count for each instance of the `outcome` property.
 
-```json
-{
-  "Arrest": 5,
-  "A no further action disposal": 3
-}
-```
+    ```json
+    {
+      "Arrest": 5,
+      "A no further action disposal": 3
+    }
+    ```
 
-Return this summary, along with a total count of all instances, back to API Gateway.
+    Return the above summary, along with a total count of all instances in the response. Complete response body example:
 
-```json
-{
-  "total": 8,
-  "breakdown": {
-    "Arrest": 5,
-    "A no further action disposal": 3
-  }
-}
-```
+    ```json
+    {
+      "total": 8,
+      "breakdown": {
+        "Arrest": 5,
+        "A no further action disposal": 3
+      }
+    }
+    ```
+ - Handle any rate limits applied to the data API requests: [API call limits](https://data.police.uk/docs/api-call-limits/)
+ - Add unit tests to cover any code written.
 
-Write tests, using the Jest framework, to prove:
+## Solution
 
-- The code formats the URL correctly with a date provided
-- The code formats the URL correctly with no date provided
-- The code returns the correct object for a given data set, use the provided [mock data](./data/mockReturn.json)
+The above task can use any Javascript libraries that may help with the solution. The completed solution should be able to run locally on NodeJS (v16+) `http://localhost:8080/`
+
+## Submission
+ - Do not fork this repo.
+ - Please do not commit your solution to a public repo.
+ - Provide a zip file of your solution with instructions on how to run.
