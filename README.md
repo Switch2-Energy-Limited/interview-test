@@ -39,4 +39,4 @@ The above task can use any Javascript libraries that may help with the solution.
 ## Submission
  - Do not fork this repo.
  - Please do not commit your solution to a public repo.
- - Provide a zip file of your solution with instructions on how to run.
+ - Provide a zip file of your solution with instructions on how to run prior to the interview.
