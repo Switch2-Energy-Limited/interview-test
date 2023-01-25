@@ -9,7 +9,7 @@ Stop and search data by date can be accessed from the data API endpoint: ["Polic
  - Validate all API requests.
  - For each request return a JSON body with the following data:
 
-    From the data API call and produce a count for each instance of the `outcome` property.
+    From the data API call and produce a count for each instance of the `outcome` property, an example with only 2 outcomes is below:
 
     ```json
     {
