@@ -34,7 +34,7 @@ Stop and search data by date can be accessed from the data API endpoint: ["Polic
 
 ## Solution
 
-The above task can use any Javascript libraries that may help with the solution. The completed solution should be able to run locally on NodeJS (v16+) `http://localhost:8080/`
+Use any langauge and libraries you wish to to complete the solution. The completed solution should run on `http://localhost:8080/`.
 
 ## Submission
  - Do not fork this repo.
