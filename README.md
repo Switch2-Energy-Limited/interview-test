@@ -37,6 +37,5 @@ Stop and search data by date can be accessed from the data API endpoint: ["Polic
 Use any langauge and libraries you wish to to complete the solution. The completed solution should run on `http://localhost:8080/` or alternatively in the cloud.
 
 ## Submission
- - Do not fork this repo.
- - Please do not commit your solution to a public repo.
- - Provide a zip file of your solution with instructions on how to run prior to the interview.
+ - Please do not fork this repo.
+ - Bring your code solution to the interview. We will use it as a basis for discussion around how you think about software.
